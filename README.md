@@ -9,15 +9,15 @@ Essa será uma aplicação que deve armazenar transações financeiras de entrad
 <strong>Dica 1:</strong> Para a categoria, você deve criar uma nova tabela, que terá os campos id, title, created_at, updated_at.
 
 <strong>Dica 2:</strong> Antes de criar uma nova categoria, sempre verifique se já existe uma categoria com o mesmo título. Caso ela exista, use o id já existente no banco de dados.</p>
-<p>{
+<pre>{
   "id": "uuid",
   "title": "Salário",
   "value": 3000,
   "type": "income",
   "category": "Alimentação"
-}</p>
+}</pre>
 <p><strong>GET /transactions:</strong> Essa rota deve retornar uma listagem com todas as transações que você cadastrou até agora, junto com o valor da soma de entradas, retiradas e total de crédito. Essa rota deve retornar um objeto o seguinte formato:</p>
-<p>{
+<pre>{
   "transactions": [
     {
       "id": "uuid",
@@ -81,7 +81,7 @@ Essa será uma aplicação que deve armazenar transações financeiras de entrad
     "outcome": 5200,
     "total": 800
   }
-}</p>
+}</pre>
 <p><strong>Dica 1:</strong> Dentro de balance, o income é a soma de todos os valores das transações com type income. O outcome é a soma de todos os valores das transações com type outcome, e o total é o valor de income - outcome.</p>
 
 <p><strong>Dica 2:</strong> Para fazer a soma dos valores, você pode usar a função reduce para agrupar as transações pela propriedade type, assim você irá conseguir somar todos os valores com facilidade e obter o retorno do balance.</p>
